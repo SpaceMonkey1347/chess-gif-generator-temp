@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Chess GIF Generator
+{% endblock %}
+
+{% block main %}
+<div class="main-content-wrapper">
+    <h1 class="main-header">Chess GIF Generator</h1>
+    <div class="canvas-wrapper">
+        <div class="chess-piece-wrapper">
+            <img src="/static/Images/1.gif" alt="chess piece" class="draggable" name="Pawn" draggable="true">
+            <img src="/static/Images/2.gif" alt="chess piece" class="draggable" name="Night" draggable="true">
+            <img src="/static/Images/3.gif" alt="chess piece" class="draggable" name="Bishop" draggable="true">
+            <img src="/static/Images/4.gif" alt="chess piece" class="draggable" name="Rook" draggable="true">
+            <img src="/static/Images/5.gif" alt="chess piece" class="draggable" name="Queen" draggable="true">
+            <img src="/static/Images/6.gif" alt="chess piece" class="draggable" name="King" draggable="true">
+        </div>
+        <canvas id="bitmap"></canvas>
+        <div class="chess-piece-wrapper">
+            <img src="/static/Images/7.gif" alt="chess piece" class="draggable" name="pawn" draggable="true">
+            <img src="/static/Images/8.gif" alt="chess piece" class="draggable" name="night" draggable="true">
+            <img src="/static/Images/9.gif" alt="chess piece" class="draggable" name="bishop" draggable="true">
+            <img src="/static/Images/10.gif" alt="chess piece" class="draggable" name="rook" draggable="true">
+            <img src="/static/Images/11.gif" alt="chess piece" class="draggable" name="queen" draggable="true">
+            <img src="/static/Images/12.gif" alt="chess piece" class="draggable" name="king" draggable="true">
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <button type="button" id="addFrame">Add Frame</button>
+        <button type="button" id="default-position">Default Position</button>
+        <button type="button" id="empty-position">Clear Board</button>
+    </div>
+    <h3 class="preview-header">Frame Preview</h3>
+    <div class="preview-wrapper">
+    </div>
+    <div class="input-wrapper">
+        <div class="fen-input-wrapper">
+            <h4 class="FEN">Upload FEN: </h4>
+            <input type="text" id="fen-input">
+        </div>
+        <button type="button" class="button-5">Generate</button>
+        <button type="button" class="button-5">Download</button>
+        <form method="POST" action="/" class="form">
+            <button type="submit" class="button-5" name="save">Save</button>
+        </form>
+    </div>
+    <div class="info-wrapper">
+        <h2>How To Use</h2>
+        <p>Drag pieces to move them</p>
+        <p>Drag pieces off-canvas to remove</p>
+        <p>Drag pieces from the sides on to the canvas</p>
+        <p>When done with current frame, click "Add Frame"</p>
+        <p>When ready to get your gif, click "Download"</p>
+    </div>
+</div>
+{% endblock %}
+

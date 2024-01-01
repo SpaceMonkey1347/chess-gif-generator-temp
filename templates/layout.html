@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="static/css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="/static/lib/jsgif-master/LZWEncoder.js"></script>
+        <script type="text/javascript" src="/static/lib/jsgif-master/NeuQuant.js"></script>
+        <script type="text/javascript" src="/static/lib/jsgif-master/GIFEncoder.js"></script>
+        <script type="text/javascript" src="/static/lib/jsgif-master/b64.js"></script>
+        <script type="text/javascript" src="/static/src/encoder.js"></script>
+        <script type="text/javascript" src="/static/src/chessboard.js"></script>
+        <script type="text/javascript" src="/static/src/index.js"></script>
+    </head>
+    <body>
+        <main>
+            {% block main %}{% endblock %}
+        </main> 
+    </body>
+</html>
