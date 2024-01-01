@@ -1,3 +1,5 @@
+NOTE: WIP, placeholder README
+
 # CHESS GIF GENERATOR
 #### Video Demo: <!-- TODO: -->
 #### Description:
