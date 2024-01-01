@@ -38,8 +38,8 @@ class Encoder {
         this.gif_encoder.download()
     }
     // array utility methods for frames
-    addFrame(frame = ctx) {
-        this.frames.push(frame)
+    addFrame(ctx) {
+        this.frames.push(ctx)
     }
     spliceFrames(index, deleteCount) {
         this.frames.splice(index, deleteCount)

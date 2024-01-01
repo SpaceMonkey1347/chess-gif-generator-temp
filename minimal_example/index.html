@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Chess GIF Generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./style.css" rel="stylesheet">
+        <script type="text/javascript" src="./jsgif-master/LZWEncoder.js"></script>
+        <script type="text/javascript" src="./jsgif-master/NeuQuant.js"></script>
+        <script type="text/javascript" src="./jsgif-master/GIFEncoder.js"></script>
+        <script type="text/javascript" src="./jsgif-master/b64.js"></script>
+        <script type="text/javascript" src="./encoder.js"></script>
+        <script type="text/javascript" src="./chessboard.js"></script>
+        <script type="text/javascript" src="./index.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="main-content-wrapper">
+                <h1 class="main-header">Chess GIF Generator</h1>
+                <div class="canvas-wrapper">
+                    <div class="chess-piece-wrapper">
+                        <img src="./Images1/1.png" alt="chess piece" class="chess-piece-img" name="Pawn" draggable="true">
+                        <img src="./Images1/2.png" alt="chess piece" class="chess-piece-img" name="Night" draggable="true">
+                        <img src="./Images1/3.png" alt="chess piece" class="chess-piece-img" name="Bishop" draggable="true">
+                        <img src="./Images1/4.png" alt="chess piece" class="chess-piece-img" name="Rook" draggable="true">
+                        <img src="./Images1/5.png" alt="chess piece" class="chess-piece-img" name="Queen" draggable="true">
+                        <img src="./Images1/6.png" alt="chess piece" class="chess-piece-img" name="King" draggable="true">
+                    </div>
+                    <canvas id="bitmap"></canvas>
+                    <div class="chess-piece-wrapper">
+                        <img src="./Images1/7.png" alt="chess piece" class="chess-piece-img" name="pawn" draggable="true">
+                        <img src="./Images1/8.png" alt="chess piece" class="chess-piece-img" name="night" draggable="true">
+                        <img src="./Images1/9.png" alt="chess piece" class="chess-piece-img" name="bishop" draggable="true">
+                        <img src="./Images1/10.png" alt="chess piece" class="chess-piece-img" name="rook" draggable="true">
+                        <img src="./Images1/11.png" alt="chess piece" class="chess-piece-img" name="queen" draggable="true">
+                        <img src="./Images1/12.png" alt="chess piece" class="chess-piece-img" name="king" draggable="true">
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <button type="button" id="add-frame-btn">Add Frame</button>
+                    <button type="button" id="starting-position-btn">Starting Position</button>
+                    <button type="button" id="clear-board-btn">Clear Board</button>
+                </div>
+                <h3 class="preview-header">Frame Preview</h3>
+                <div class="preview-wrapper">
+                </div>
+                <div class="input-wrapper">
+                    <div class="fen-input-wrapper">
+                        <h4 class="FEN">Upload FEN: </h4>
+                        <input type="text" id="fen-input">
+                    </div>
+                    <button type="button" id="generate-btn">Generate</button>
+                    <button type="button" class="download-btn">Download</button>
+                    <form method="POST" action="/" class="form">
+                        <button type="submit" class="save-btn" name="save">Save</button>
+                    </form>
+                </div>
+                <div class="info-wrapper">
+                    <h2>How To Use</h2>
+                    <p>Drag pieces to move them</p>
+                    <p>Drag pieces off-canvas to remove</p>
+                    <p>Drag pieces from the sides on to the canvas</p>
+                    <p>When done with current frame, click "Add Frame"</p>
+                    <p>When ready to get your gif, click "Download"</p>
+                </div>
+            </div>
+
+        </main> 
+    </body>
+</html>
+
+
+    
+
